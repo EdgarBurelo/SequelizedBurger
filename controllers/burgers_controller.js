@@ -17,7 +17,7 @@ module.exports = function(app) {
                 noDevBurger,
                 devBurger
             };
-            console.log(obj);
+            //console.log(obj);
             res.render("index", obj);
         });
     });
@@ -27,10 +27,25 @@ module.exports = function(app) {
             burger_name: req.body.burgername,
 
         }).then((data) => {
-            console.log(JSON.stringify(data));
+            //console.log(JSON.stringify(data));
+            //res.JSON(data);
+            res.send("added");
         })
     });
-    
+
+    app.put("/index/burgers/:id", function (req, res) {
+        db.burgers.update({
+            devoured: true
+            },
+            {
+            where: {
+                id: req.params.id
+            },
+
+        }).then((data) => {
+            res.send("devoured");
+        });
+    });
 }
 
 // router.post("/index/burgers",function(req,res) {
