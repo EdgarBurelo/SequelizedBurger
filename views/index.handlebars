@@ -1,0 +1,44 @@
+<br>
+
+
+
+<br>
+<div class="col-3 offset-2 centerText" id="notDevBurg">
+    <div class="row">
+        {{#each noDevBurger}}
+        <div class="col-8 cajita" >
+           {{id}}. {{burger_name}}
+        </div>
+        <div class="offset-1 col-3" style="margin-top:3px">
+        <button type="button" class="btn btn-success devour" id="{{id}}">Submit</button>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<div class="col-3 offset-2 centerText" id="devBurg">
+    <div class="row">
+        {{#each devBurger}}
+        <div class="col-12 cajita" >
+            {{id}}. {{burger_name}}
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<br>
+
+<div class="col-md-4 offset-md-4 centerText" >
+    <form>
+        <textarea name="burger" rows="5" cols="40" placeholder="Write the burger name" id="newBurg" ></textarea>
+        <button type="button" class="btn btn-success addBurger">Submit</button>
+    </form>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-2 col-md-8 centerText" id="someAlert">
+            {{!-- <div class="alert alert-primary" role="alert" id="alert">
+            </div> --}}
+        </div>
+    </div>
+</div>

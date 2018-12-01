@@ -1,0 +1,21 @@
+body {
+    background: #D64026;
+}
+
+.image-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.centerText {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.cajita {
+    margin-top: 3px;
+    border: grey;
+    border-radius: 5px;
+    background: #ffffff;
+}
